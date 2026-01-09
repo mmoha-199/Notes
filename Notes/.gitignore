@@ -56,3 +56,5 @@ $RECYCLE.BIN/
 # JetBrains Rider
 .idea/
 *.sln.iml
+# Settings file
+appsettings.json

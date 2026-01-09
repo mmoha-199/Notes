@@ -61,12 +61,21 @@
 
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.11" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.112" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.11"/>
+		
 	</ItemGroup>
-
 	<ItemGroup>
-	  <Folder Include="ViewModels\" />
+       <EmbeddedResource Include="appsettings.json" />
+       <None Update="appsettings.json">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+       </None>
+    </ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Data\" />
 	</ItemGroup>
 
 </Project>
